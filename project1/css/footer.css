@@ -1,0 +1,140 @@
+footer > div.footer-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #1764ce;
+}
+
+/* top */
+footer > div.footer-box > div.footer-top {
+  background-color: #dbecfb;
+}
+
+footer > div.footer-box > div.footer-top > ul {
+  display: flex;
+  width: 1168px;
+  margin: 15px auto;
+  gap: 35px;
+  justify-content: center;
+  color: #0b6fcd;
+}
+
+footer > div.footer-box > div.footer-top > ul > li {
+  cursor: pointer;
+}
+
+footer > div.footer-box > div.footer-top > ul > li > img {
+  margin-left: 2px;
+}
+
+/* bottom */
+footer > div.footer-box > div.footer-bottom {
+  height: 160px;
+  display: flex;
+  width: 1168px;
+  margin: auto;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 13.6px;
+}
+
+/* bottom-left */
+footer > div.footer-box > div.footer-bottom > div.footer-b-left {
+  display: flex;
+  flex-direction: column;
+}
+
+footer > div.footer-box > div.footer-bottom > div.footer-b-left > ul {
+  display: flex;
+}
+
+footer
+  > div.footer-box
+  > div.footer-bottom
+  > div.footer-b-left
+  > ul
+  > li
+  > span.f-line {
+  display: inline-block;
+  border-left: 2px solid #fff;
+  height: 14px;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+footer > div.footer-box > div.footer-bottom > div.footer-b-left > p#addr {
+  margin-top: 25px;
+}
+
+footer > div.footer-box > div.footer-bottom > div.footer-b-left > p.f-item {
+  margin-bottom: 10px;
+}
+
+/* bottom-center */
+footer > div.footer-box > div.footer-bottom > div.footer-b-center {
+  display: flex;
+  width: 348px;
+  align-items: center;
+  margin-top: 15px;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+footer
+  > div.footer-box
+  > div.footer-bottom
+  > div.footer-b-center
+  > a
+  > img.second {
+  width: 68px;
+}
+
+footer
+  > div.footer-box
+  > div.footer-bottom
+  > div.footer-b-center
+  > a
+  > img.cen-img {
+  width: 97px;
+  height: 48px;
+  margin-right: 10px;
+}
+
+/* bottom-right */
+
+footer > div.footer-box > div.footer-bottom > div.footer-b-right > ul.fbr-ul {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+footer
+  > div.footer-box
+  > div.footer-bottom
+  > div.footer-b-right
+  > ul.fbr-ul
+  > li.fbr-item {
+  display: flex;
+  flex-direction: column;
+  width: 82px;
+  gap: 5px;
+}
+
+footer
+  > div.footer-box
+  > div.footer-bottom
+  > div.footer-b-right
+  > ul.fbr-ul
+  > li.fbr-item
+  > img {
+  width: 82px;
+}
+
+footer
+  > div.footer-box
+  > div.footer-bottom
+  > div.footer-b-right
+  > ul.fbr-ul
+  > li.fbr-item
+  > span {
+  text-align: center;
+}
