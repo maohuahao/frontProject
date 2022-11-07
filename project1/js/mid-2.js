@@ -21,7 +21,6 @@ function mid2Carousel() {
     ul.style.transition = "transform 500ms ease-in-out 0s";
     ul.style.transform = `translateX(${-296 * i}px)`;
 
-    console.log(i);
     if (i == 6) {
       i = 0;
       ul.addEventListener("transitionend", handle, false);
@@ -41,5 +40,52 @@ function mid2Carousel() {
     i++;
   }
 
-  setInterval(budle, 3000);
+  let timer = setInterval(budle, 3000);
+
+  /* */
+
+  let left = document.querySelector(".z-left");
+  let right = document.querySelector(".z-right");
+
+  console.log(left);
+
+  function mouseOver() {
+    clearInterval(timer);
+  }
+
+  function mouseOut() {
+    timer = setInterval(budle, 3000);
+  }
+
+  /* 节流 */
+  function throttle(handler, wait) {
+    var lastTime = 0;
+
+    return function () {
+      var nowTime = new Date().getTime();
+
+      if (nowTime - lastTime > wait) {
+        handler.apply(this, arguments);
+        lastTime = nowTime;
+      }
+    };
+  }
+
+  function onClick() {
+    ul.style.transition = "transform 500ms ease-in-out 0s";
+    let transform = getComputedStyle(ul, null)["transform"];
+    let split = transform.split(",");
+    let translateX = parseInt(split[4]);
+    console.log(translateX);
+
+    ul.style.transform = `translateX(${translateX - 296}px)`;
+    if (translateX === -1776) {
+      ul.style.transition = "transform 0ms ease-in-out 0s";
+      ul.style.transform = "translateX(0)";
+    }
+  }
+
+  left.addEventListener("mouseover", mouseOver, false);
+  left.addEventListener("mouseout", mouseOut, false);
+  left.addEventListener("click", throttle(onClick, 500), false);
 }

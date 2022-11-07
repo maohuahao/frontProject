@@ -65,6 +65,7 @@ div.middle-2 > div.div-box {
 }
 div.middle-2 > div.div-box > ul#list {
   display: flex;
+  transform: translateX(0);
 }
 
 div.middle-2 > div.div-box > ul#list > li.img-box {
@@ -105,8 +106,8 @@ div.middle-2 > div.div-box > a {
   z-index: 1;
   width: 21px;
   height: 36px;
-  display: none;
   cursor: pointer;
+  display: none;
 }
 
 div.middle-2 > div.div-box > a.z-left {

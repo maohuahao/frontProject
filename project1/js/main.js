@@ -1,12 +1,11 @@
 window.onload = function () {
   /* 轮播 */
   mid2Carousel();
+  dropDown();
 
   /* 切换下划线 */
   const h2_left = document.querySelectorAll(".left-title");
   const ul_left = document.querySelectorAll(".left-ul");
-  console.log(h2_left);
-  console.log(ul_left);
 
   for (let i = 0; i < h2_left.length; i++) {
     h2_left[i].onmouseover = function () {

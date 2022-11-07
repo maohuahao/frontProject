@@ -7,23 +7,53 @@ footer > div.footer-box {
 /* top */
 footer > div.footer-box > div.footer-top {
   background-color: #dbecfb;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 58px;
 }
 
-footer > div.footer-box > div.footer-top > ul {
+footer > div.footer-box > div.footer-top > ul.drop-title {
   display: flex;
   width: 1168px;
-  margin: 15px auto;
-  gap: 35px;
-  justify-content: center;
+  margin: 0 auto;
+  /* justify-content: space-between; */
   color: #0b6fcd;
 }
 
-footer > div.footer-box > div.footer-top > ul > li {
+footer > div.footer-box > div.footer-top > ul.drop-title > li {
   cursor: pointer;
+  width: 146px;
+  height: 58px;
+  text-align: center;
+  line-height: 58px;
 }
 
-footer > div.footer-box > div.footer-top > ul > li > img {
+footer > div.footer-box > div.footer-top > ul.drop-title > li > img {
   margin-left: 2px;
+}
+
+/* 下拉框 */
+
+footer > div.footer-box > div.footer-top > ul.drop-down {
+  position: absolute;
+  width: 1168px;
+  /* height: 180px; */
+  height: 0;
+  overflow: auto;
+  background-color: #fff;
+  top: 58px;
+  transition: height 0.5s linear;
+  display: flex;
+  flex-wrap: wrap;
+}
+footer > div.footer-box > div.footer-top > ul.drop-down > li {
+  width: 224px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  color: #333;
 }
 
 /* bottom */
