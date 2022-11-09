@@ -110,11 +110,8 @@ function mid2Carousel() {
     i--;
   }
 
-  function leftMouseover() {
-    let m = getComputedStyle(ul, null)["transform"];
-    let x = m.split(",")[4];
-
-    if (parseInt(x) === 0) {
+  function leftMousedown() {
+    if (i === 0) {
       ul.style.transition = "transform 0ms ease-in-out 0s";
       ul.style.transform = "translateX(-1776px)";
       i = 6;
@@ -124,7 +121,7 @@ function mid2Carousel() {
   left.addEventListener("mouseover", mouseOver, false);
   left.addEventListener("mouseout", mouseOut, false);
   left.addEventListener("click", throttle(leftClick, 500), false);
-  left.addEventListener("mousedown", throttle(leftMouseover, 500), false);
+  left.addEventListener("mousedown", throttle(leftMousedown, 500), false);
 
   /* 定义分页动画 */
 
