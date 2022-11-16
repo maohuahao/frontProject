@@ -2,10 +2,9 @@ header {
   height: 574px;
   background: url(../img/header/header-bg.png) no-repeat center;
   background-size: 117em 100%;
-}
+} 
 
 div.container {
-  margin: auto;
   position: relative;
   display: flex;
   justify-content: center;

@@ -1,27 +1,29 @@
+/* 设置最外层的盒子为flex弹性盒子，使其子项能够继承背景颜色 */
 footer > div.footer-box {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* 设置为弹性盒子 */
+  flex-direction: column; /* 使其子项竖向排列 */
   background-color: #1764ce;
 }
 
 /* top */
+/* 定义头部样式 */
 footer > div.footer-box > div.footer-top {
   background-color: #dbecfb;
-  position: relative;
+  position: relative; /* 相对定位，使其下拉框能够绝对定位在这个区域 */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* 下拉框能够居中 */
   height: 58px;
 }
 
 footer > div.footer-box > div.footer-top > ul.drop-title {
   display: flex;
-  width: 1168px;
-  margin: 0 auto;
-  /* justify-content: space-between; */
+  width: 1168px; /* 整个页面的内容盒子为1168px，方便不同区域左右对齐 */
+  margin: 0 auto; /* 水平居中 */
   color: #0b6fcd;
 }
 
+/* 下拉框中的内容的样式 */
 footer > div.footer-box > div.footer-top > ul.drop-title > li {
   cursor: pointer;
   width: 146px;
@@ -30,24 +32,25 @@ footer > div.footer-box > div.footer-top > ul.drop-title > li {
   line-height: 58px;
 }
 
+/* 调节箭头图标和li内容之间的外边距 */
 footer > div.footer-box > div.footer-top > ul.drop-title > li > img {
   margin-left: 2px;
 }
 
-/* 下拉框 */
-
+/* 下拉框的样式 */
 footer > div.footer-box > div.footer-top > ul.drop-down {
-  position: absolute;
+  position: absolute; /* 子绝父相，在上面定义父元素的相对位置就是为了能使其下拉框能定位到父元素上 */
   width: 1168px;
-  /* height: 180px; */
   height: 0;
-  overflow: auto;
+  overflow: auto; /* 如果有溢出变成滚轮 */
   background-color: #fff;
   top: 58px;
   transition: height 0.5s linear;
-  display: flex;
-  flex-wrap: wrap;
+  display: flex; /* 弹性盒子 */
+  flex-wrap: wrap; /* 默认当行，多行设置 */
 }
+
+/* 设置下拉框中内容的样式 */
 footer > div.footer-box > div.footer-top > ul.drop-down > li {
   width: 224px;
   height: 48px;
@@ -57,6 +60,7 @@ footer > div.footer-box > div.footer-top > ul.drop-down > li {
 }
 
 /* bottom */
+/* 设置底部样式 */
 footer > div.footer-box > div.footer-bottom {
   height: 160px;
   display: flex;
@@ -77,6 +81,7 @@ footer > div.footer-box > div.footer-bottom > div.footer-b-left > ul {
   display: flex;
 }
 
+/* 设置竖杠 */
 footer
   > div.footer-box
   > div.footer-bottom
@@ -91,10 +96,12 @@ footer
   margin: 0 5px;
 }
 
+/* 微调 */
 footer > div.footer-box > div.footer-bottom > div.footer-b-left > p#addr {
   margin-top: 25px;
 }
 
+/* 微调 */
 footer > div.footer-box > div.footer-bottom > div.footer-b-left > p.f-item {
   margin-bottom: 10px;
 }
@@ -109,6 +116,7 @@ footer > div.footer-box > div.footer-bottom > div.footer-b-center {
   margin-left: 20px;
 }
 
+/* 设置图片大小 */
 footer
   > div.footer-box
   > div.footer-bottom
@@ -118,6 +126,7 @@ footer
   width: 68px;
 }
 
+/* 设置图片样式 */
 footer
   > div.footer-box
   > div.footer-bottom
@@ -130,35 +139,27 @@ footer
 }
 
 /* bottom-right */
-
+/* 设置底部右边区域的样式 */
 footer > div.footer-box > div.footer-bottom > div.footer-b-right > ul.fbr-ul {
   display: flex;
   gap: 20px;
   margin-top: 10px;
 }
 
+/* 设置内容中包含二维码和span标签的盒子样式 */
 footer
   > div.footer-box
   > div.footer-bottom
   > div.footer-b-right
   > ul.fbr-ul
   > li.fbr-item {
-  display: flex;
-  flex-direction: column;
-  width: 82px;
+  display: flex; /* 设置为弹性盒子 */
+  flex-direction: column; /* 使其img和span标签竖向排列 */
+  width: 82px; /* 固定盒子大小 */
   gap: 5px;
 }
 
-footer
-  > div.footer-box
-  > div.footer-bottom
-  > div.footer-b-right
-  > ul.fbr-ul
-  > li.fbr-item
-  > img {
-  width: 82px;
-}
-
+/* 二维码下的图片居中 */
 footer
   > div.footer-box
   > div.footer-bottom
